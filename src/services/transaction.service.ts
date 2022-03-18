@@ -1,8 +1,9 @@
 import ErrorHandler from '../utils/errorHandler';
 import { TransactionsRepository } from '../repository'
 import { logger } from '../conf/logger';
+import { TrxEntry } from '../types';
 
-const getAll = () => {
+const getAll = (): TrxEntry[] => {
     try {
         return TransactionsRepository.getAll();
     }

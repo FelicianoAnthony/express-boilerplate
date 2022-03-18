@@ -2,8 +2,9 @@ import * as express from 'express';
 import { TransactionsService } from '../services';
 import { logger } from '../conf/logger';
 import ErrorHandler from '../utils/errorHandler';
+import { TrxEntry } from '../types';
 
-const getAll = (req: express.Request, res: express.Response, next: express.NextFunction) => {
+const getAll = (req: express.Request, res: express.Response, next: express.NextFunction): express.Response<TrxEntry[]> => {
     try {
         const data = TransactionsService.getAll();
         res.status(200).json(data);

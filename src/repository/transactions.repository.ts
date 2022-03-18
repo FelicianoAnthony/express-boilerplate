@@ -1,9 +1,8 @@
 import { logger } from '../conf/logger';
-// import * as axios from 'axios';
-const axios = require('axios');
 import { TransactionData } from '../data';
+import { TrxEntry } from '../types';
 
-const getAll = () => {
+const getAll = (): TrxEntry[] =>  {
     return TransactionData;
 }
 
