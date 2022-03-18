@@ -1,0 +1,1 @@
+export * as TransactionsService from './transaction.service';

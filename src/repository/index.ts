@@ -1,0 +1,1 @@
+export * as TransactionsRepository from './transactions.repository';
